@@ -1,3 +1,33 @@
-.navbar {
-    padding: 20px;
+@import "../../styles/base.css";
+
+.wrap {
+    height: 60px;
+    background: var(--intergen-black);
+}
+
+.container {
+    lost-utility: clearfix;
+    lost-center: 1280px;
+    line-height: 60px;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--intergen-logo-yellow);
+    display: block;
+    width: 350px;
+    height: 60px;
+
+    & img {
+        width: 200px;
+        margin-top: 12px;
+        float: left;
+    }
+
+    & h1 {
+        display: inline;
+        line-height: 20px;
+        vertical-align: middle;
+        font-weight: 600;
+    }
 }
