@@ -1,22 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
+import React, { PropTypes } from 'react';
+import Headroom from 'react-headroom';
+import Helmet from 'react-helmet';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
+import { config } from 'config';
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any,
-    }
-  },
-  render () {
+const PageTemplate = ({ children }) => {
     return (
-      <div>
-        <Headroom>
-          <Link to={prefixLink('/')}>Gatsby!!!</Link>
-        </Headroom>
-        {this.props.children}
-      </div>
+        <div>
+            <Helmet title={config.siteTitle} />
+
+            <Headroom>
+                <Link to={prefixLink('/')}>Gatsby!!!</Link>
+            </Headroom>
+
+            { children }
+        </div>
     );
-  },
-})
+};
+
+PageTemplate.propTypes = {
+    children: PropTypes.object.isRequired
+};
+
+export default PageTemplate;
