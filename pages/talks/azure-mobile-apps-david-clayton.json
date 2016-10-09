@@ -1,0 +1,15 @@
+{
+    "title": "Azure Mobile Apps",
+    "speaker": "David Clayton",
+    "description": "With the Mobile Apps feature of Azure App Service, it's easy to rapidly build engaging cross-platform and native apps for iOS, Android, Windows, or Mac; store app data in the cloud or on-premises; authenticate users; send push notifications; or add your custom backend logic in C# or Node.js",
+    "date": "2016-10-05",
+    "slideDeck": {
+        "link": "http://slides.com/news/collaborate-on-slides#/"
+    },
+    "links": [
+        {
+            "title": "Azure portal",
+            "href": "https://portal.azure.com"
+        }
+    ]
+}

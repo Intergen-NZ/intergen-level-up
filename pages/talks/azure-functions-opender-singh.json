@@ -1,0 +1,19 @@
+{
+    "title": "Azure Functions",
+    "speaker": "Opender Singh",
+    "description": "Azure Functions is a serverless event driven experience that extends the existing Azure App Service platform. These nano-services can scale based on demand and you pay only for the resources you consume.",
+    "date": "2016-10-05",
+    "slideDeck": {
+        "link": "http://slides.com/simpson/web-security-101-pixelscamp#/"
+    },
+    "links": [
+        {
+            "title": "Azure portal",
+            "href": "https://portal.azure.com"
+        },
+        {
+            "title": "Azure functions pricing",
+            "href": "https://azure.microsoft.com/en-us/pricing/details/functions/"
+        }
+    ]
+}
