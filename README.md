@@ -1,7 +1,11 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Intergen Level-Up
+Static site to publish developer catch up sessions
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+### Demo
+[https://intergen-nz.github.io/intergen-level-up/](https://intergen-nz.github.io/intergen-level-up/)
+
+### Contributing
+- [ ] Todo
+
+### Adding a talk
+- [ ] Todo
