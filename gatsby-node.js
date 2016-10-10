@@ -9,7 +9,15 @@ exports.modifyWebpackConfig = function(config, env) {
                 require('lost')
             ]
         },
-    })
+    });
+
+    config.merge({
+        postcss: [
+            require('postcss-import')(),
+            require('postcss-cssnext')({ browsers: 'last 2 versions' }),
+            require('lost')
+        ]
+    });
 
     return config;
 };
