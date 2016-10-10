@@ -6,21 +6,13 @@ import styles from './template.module.css';
 import Navbar from '../components/navbar/navbar.js';
 
 class PageTemplate extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			children: props.children
-		};
-	}
-
 	render() {
 		return (
 			<div>
 				<Helmet title={config.siteTitle} />
 	            <Navbar />
 	            <div className={styles.page}>
-	            	{ this.state.children }
+	            	{ this.props.children }
 	            </div>
 			</div>
 		);
