@@ -21,7 +21,7 @@ class Index extends React.Component {
 
 		return (
 			<ul>
-				{ talks.map(talk => <li key={talk.path}><Link to={talk.path}>{talk.data.title}</Link></li>) }
+				{ talks.map(talk => <li key={talk.path}><Link to={prefixLink(talk.path)}>{talk.data.title}</Link></li>) }
 			</ul>
 		)
 	}
