@@ -2,32 +2,57 @@
 
 .wrap {
     height: 60px;
-    background: var(--intergen-black);
+    background: var(--intergen-yellow);
 }
 
 .container {
     lost-utility: clearfix;
-    lost-center: 1280px;
+    lost-center: var(--max-page-width);
     line-height: 60px;
 }
 
-.logo {
-    text-decoration: none;
-    color: var(--intergen-logo-yellow);
-    display: block;
-    width: 350px;
+.navLeft {
+    lost-column: 1/3;
+
+    & a {
+        text-decoration: none;
+        color: black;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom-color: black;
+        }
+    }
+}
+
+.navRight {
+    lost-column: 2/3;
+    lost-align: right;
     height: 60px;
 
-    & img {
-        width: 200px;
-        margin-top: 12px;
-        float: left;
+    & ul {
+        margin: 0;
+        list-style: none;
     }
 
-    & h1 {
-        display: inline;
-        line-height: 20px;
-        vertical-align: middle;
-        font-weight: 600;
+    & li {
+        float: left;
+        padding: 0 10px;
+        height: 60px;
+        margin-right: 10px;
+
+        & a {
+            text-decoration: none;
+            color: black;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                border-bottom-color: black;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }

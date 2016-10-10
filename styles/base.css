@@ -2,6 +2,8 @@
     --intergen-yellow: #FFD300;
     --intergen-logo-yellow: #FFDD00;
     --intergen-black: #2C2827;
+
+    --max-page-width: 1280px;
 }
 
 html, body {

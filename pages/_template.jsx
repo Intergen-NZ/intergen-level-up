@@ -2,19 +2,30 @@ import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 
+import styles from './template.module.css';
 import Navbar from '../components/navbar/navbar.js';
 
-const PageTemplate = ({ children }) => {
-    return (
-        <div>
-            <Helmet title={config.siteTitle} />
+class PageTemplate extends React.Component {
+	constructor(props) {
+		super(props);
 
-            <Navbar />
+		this.state = {
+			children: props.children
+		};
+	}
 
-            { children }
-        </div>
-    );
-};
+	render() {
+		return (
+			<div>
+				<Helmet title={config.siteTitle} />
+	            <Navbar />
+	            <div className={styles.page}>
+	            	{ this.state.children }
+	            </div>
+			</div>
+		);
+	}
+}
 
 PageTemplate.propTypes = {
     children: PropTypes.object.isRequired

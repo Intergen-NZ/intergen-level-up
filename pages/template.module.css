@@ -1,0 +1,6 @@
+@import '../styles/base.css';
+
+.page {
+	lost-utility: clearfix;
+	lost-center: var(--max-page-width);
+}

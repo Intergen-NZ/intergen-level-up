@@ -9,10 +9,17 @@ const Navbar = () => {
     return (
         <nav className={styles.wrap}>
             <div className={styles.container}>
-                <Link to={prefixLink('/')} className={styles.logo}>
-                    <img src={logo} />
-                    <h1>/level-up</h1>
-                </Link>
+                <div className={styles.navLeft}>
+                    <Link to={prefixLink('/')}>Intergen: Level up</Link>
+                </div>
+
+                <div className={styles.navRight}>
+                    <ul>
+                        <li><Link to={prefixLink('/')}>Home</Link></li>
+                        <li><Link to={prefixLink('/')}>About</Link></li>
+                        <li><Link to={prefixLink('/')}>Mailing List</Link></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     );
