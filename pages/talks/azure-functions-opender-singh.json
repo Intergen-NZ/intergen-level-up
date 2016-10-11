@@ -15,5 +15,6 @@
             "title": "Azure functions pricing",
             "href": "https://azure.microsoft.com/en-us/pricing/details/functions/"
         }
-    ]
+    ],
+    "tags": ["auzre", "serverless"]
 }
