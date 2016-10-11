@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
-import logo from './logo.png';
 import styles from './navbar.module.css';
 
 const Navbar = () => {
