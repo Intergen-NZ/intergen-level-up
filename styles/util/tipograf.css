@@ -62,8 +62,6 @@ h6 {
 
 p {
     margin-top: var(--leading-space);
-    margin-bottom: 0;
-    max-width: var(--max-line-length);
     letter-spacing: var(--base-letter-spacing);
 }
 

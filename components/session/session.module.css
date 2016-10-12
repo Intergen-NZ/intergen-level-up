@@ -1,0 +1,37 @@
+@import '../../styles/base.css';
+
+.session { }
+
+.sessionTitle {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        left: -72px;
+        top: 11px;
+        border: 8px solid var(--intergen-black);
+    }
+}
+
+.talkTitle {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        left: -65px;
+        top: 7px;
+        border: 5px solid var(--intergen-black);
+    }
+}

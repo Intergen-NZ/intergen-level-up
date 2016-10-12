@@ -1,0 +1,18 @@
+@import '../styles/base.css';
+
+.root {
+    lost-utility: clearfix;
+}
+
+.fixed {
+    lost-column: 1/4;
+}
+
+.sessionListWrap {
+    lost-column: 3/4;
+}
+
+.sessionList {
+    border-left: 5px solid rgba(255, 255, 255, .6);
+    padding-left: 50px;
+}

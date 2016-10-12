@@ -4,6 +4,7 @@ import { prefixLink } from 'gatsby-helpers'
 import * as _ from 'lodash';
 
 import Session from '../components/session/session.js';
+import styles from './index.module.css';
 
 class Index extends React.Component {
 	constructor(props) {
@@ -30,8 +31,16 @@ class Index extends React.Component {
 
 	render() {
 		return (
-			<div>
-	            {this.getSessions()}
+			<div className={styles.root}>
+	            <div className={styles.fixed}>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis dolorem quibusdam mollitia, harum repellat illo deserunt iure, maiores debitis iste amet excepturi consectetur nobis natus eligendi minus modi, ipsa ab!</p>
+                </div>
+
+                <div className={styles.sessionListWrap}>
+                    <div className={styles.sessionList}>
+                        { this.getSessions() }
+                    </div>
+                </div>
 	        </div>
 		);
 	}

@@ -1,13 +1,39 @@
 import React, { PropTypes } from 'react';
 import moment from 'moment';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
 
-const Session = ({ number, talks }) => {
-    const sessionDate = moment(talks[0].data.date).format('MMM Do YY');
+import styles from './session.module.css';
 
-    return (
-        <h2>Session {number} {sessionDate}</h2>
-    )
-};
+class Session extends React.Component {
+    constructor(props) {
+        super(props);
+        this.getSessionTitle = this.getSessionTitle.bind(this);
+    }
+
+    getSessionTitle() {
+        const talk = this.props.talks[0];
+        const sessionDate = moment(talk.data.date).format('MMM Do YY');
+
+        return `Session ${this.props.number}: ${sessionDate}`;
+    }
+
+    // TOOD(AM): Pull out talks component.
+    render() {
+        return (
+            <section className={styles.session}>
+                <h3 className={styles.sessionTitle}>{this.getSessionTitle()}</h3>
+                { this.props.talks.map((talk) => (
+                    <div className={styles.talk}>
+                        <Link to={prefixLink(talk.path)}><h6 className={styles.talkTitle}>{talk.data.title}</h6></Link>
+                        <span>{talk.data.speaker}</span>
+                        <p>{talk.data.description}</p>
+                    </div>
+                )) }
+            </section>
+        )
+    }
+}
 
 Session.propTypes = {
     number: PropTypes.number.isRequired,
