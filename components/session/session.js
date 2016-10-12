@@ -23,8 +23,8 @@ class Session extends React.Component {
         return (
             <section className={styles.session}>
                 <h3 className={styles.sessionTitle}>{this.getSessionTitle()}</h3>
-                { this.props.talks.map((talk) => (
-                    <div className={styles.talk}>
+                { this.props.talks.map((talk, i) => (
+                    <div key={i} className={styles.talk}>
                         <Link to={prefixLink(talk.path)}><h6 className={styles.talkTitle}>{talk.data.title}</h6></Link>
                         <span>{talk.data.speaker}</span>
                         <p>{talk.data.description}</p>
