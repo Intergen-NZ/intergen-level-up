@@ -1,13 +1,14 @@
+@import './typography.css';
+
 :root {
     --intergen-yellow: #FFD300;
     --intergen-logo-yellow: #FFDD00;
-    --intergen-black: #2C2827;
+    --intergen-black: #222;
 
     --max-page-width: 1280px;
 }
 
 html, body {
     margin: 0;
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-size: 20px;
+    background-color: var(--intergen-black);
 }

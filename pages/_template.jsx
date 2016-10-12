@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 
+import '../styles/base.css';
 import styles from './template.module.css';
 import Navbar from '../components/navbar/navbar.js';
 
