@@ -1,31 +1,37 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
+import * as _ from 'lodash';
+
+import Session from '../components/session/session.js';
 
 class Index extends React.Component {
 	constructor(props) {
 		super(props);
-		this.getTalks = this.getTalks.bind(this);
+		this.getSessions = this.getSessions.bind(this);
 	}
 
-	getTalks() {
-		const pages = this.props.route.pages;
-		const talks = pages.filter((page) => {
-			return page.path.indexOf('/talks/') === 0;
-		});
+    getSessions() {
+        const pages = this.props.route.pages;
+        let talks = pages.filter(page => page.path.indexOf('/talks/') === 0);
 
-		return (
-			<ul>
-				{ talks.map(talk => <li key={talk.path}><Link to={prefixLink(talk.path)}>{talk.data.title} - {talk.data.speaker}</Link></li>) }
-			</ul>
-		)
-	}
+        let sessions = _.groupBy(talks, talk => {
+            return new Date(talk.data.date);
+        });
+
+        sessions = _.sortBy(sessions, session => {
+            return new Date(session[0].data.date);
+        }).reverse();
+
+        return (
+            sessions.map((talks, i) => <Session key={i} number={sessions.length - i} talks={talks} />)
+        );
+    }
 
 	render() {
 		return (
 			<div>
-	            <h1>Talks</h1>
-	            {this.getTalks()}
+	            {this.getSessions()}
 	        </div>
 		);
 	}

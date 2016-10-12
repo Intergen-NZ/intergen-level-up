@@ -9,6 +9,7 @@
     "highlight.js": "~9.6.0",
     "history": "~2.0.2",
     "js-yaml": "~3.6.0",
+    "lodash": "~4.16.4",
     "lost": "~7.1.0",
     "markdown-it": "~7.0.1",
     "markdown-it-abbr": "~1.0.3",
@@ -16,6 +17,7 @@
     "markdown-it-deflist": "~2.0.1",
     "markdown-it-footnote": "~3.0.1",
     "markdown-it-sub": "~1.0.0",
+    "moment": "~2.15.1",
     "object-assign": "~4.1.0",
     "react-helmet": "~3.1.0",
     "toml-js": "0.0.8"
