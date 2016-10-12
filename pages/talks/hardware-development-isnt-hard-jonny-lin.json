@@ -1,0 +1,11 @@
+{
+    "title": "Hardware Development isn't that hard! Make your next Raspberry Pi / Arduino project in Visual Studio",
+    "speaker": "Jonny Lin",
+    "description": "Come to this session if you want to save time on creating your next embedded project! If you are like me, or anybody who's passionate about building stuff, you might have gotten yourself a Raspberry Pi or Arduino over the last few years. It can be haunting to get started working with unfamiliar platforms, so I'll walk you through several ways to make an embedded application via Visual Studio, and especially what the UWP apps have to offer.",
+    "date": "2016-10-19",
+    "slideDeck": {
+        "link": "http://slides.com/news/collaborate-on-slides#/"
+    },
+    "links": [],
+    "tags": ["hardware", "iot", "raspberry pi", "arduino"]
+}

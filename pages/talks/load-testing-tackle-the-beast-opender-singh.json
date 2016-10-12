@@ -1,0 +1,11 @@
+{
+    "title": "Load Testing - tackle the beast!",
+    "speaker": "Opender Singh",
+    "description": "\"How many users can we handle? Just an estimate is fine.\" Ever been asked that as a developer? Ever asked yourself, and struggled to objectively answer? In a world of complex web and mobile solutions, many tools fall short for various reasons, and you can rule out almost all of them if your APIs are private. In this session I will outline load testing as a concept, an approach we took, and explain the process behind developing a standard harness that enables a simple, code-first approach to be used directly by developers. I will also cover how Power BI was used to draw correlations within the test results and drive changes at the tail end of an extensive 3-year project.",
+    "date": "2016-10-20",
+    "slideDeck": {
+        "link": "http://slides.com/news/collaborate-on-slides#/"
+    },
+    "links": [],
+    "tags": ["load testing"]
+}
