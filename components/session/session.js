@@ -19,7 +19,7 @@ class Session extends React.Component {
 
     render() {
         return (
-            <section className={styles.session}>
+            <section className={styles.root}>
                 <h3 className={styles.title}>{this.getSessionTitle()}</h3>
                 <div className={styles.talksContainer}>
                 	{ this.props.talks.map((talk, i) => <Talk key={i} data={talk.data} path={talk.path} />) }
