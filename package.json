@@ -30,7 +30,6 @@
     "main": "n/a",
     "scripts": {
         "start": "gatsby develop",
-        "preinstall": "npm install -g gatsby",
         "build": "gatsby build --prefix-links",
         "deploy": "npm run build && gh-pages -d public",
         "test": "npm run build"
