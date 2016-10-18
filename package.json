@@ -1,39 +1,38 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "front-matter": "~2.0.7",
-    "gatsby": "~0.12.6",
-    "highlight.js": "~9.6.0",
-    "history": "~2.0.2",
-    "js-yaml": "~3.6.0",
-    "lodash": "~4.16.4",
-    "lost": "~7.1.0",
-    "markdown-it": "~7.0.1",
-    "markdown-it-abbr": "~1.0.3",
-    "markdown-it-attrs": "~0.6.3",
-    "markdown-it-deflist": "~2.0.1",
-    "markdown-it-footnote": "~3.0.1",
-    "markdown-it-sub": "~1.0.0",
-    "moment": "~2.15.1",
-    "object-assign": "~4.1.0",
-    "react-helmet": "~3.1.0",
-    "toml-js": "0.0.8"
-  },
-  "devDependencies": {
-    "gh-pages": "~0.11.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public",
-    "develop": "gatsby develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "name": "intergen-level-up",
+    "description": "Static site to publish talks at Intergen",
+    "version": "1.0.0",
+    "author": "Aquib Master",
+    "private": true,
+    "dependencies": {
+        "front-matter": "~2.0.7",
+        "gatsby": "~0.12.6",
+        "highlight.js": "~9.6.0",
+        "history": "~2.0.2",
+        "js-yaml": "~3.6.0",
+        "lodash": "~4.16.4",
+        "lost": "~7.1.0",
+        "markdown-it": "~7.0.1",
+        "markdown-it-abbr": "~1.0.3",
+        "markdown-it-attrs": "~0.6.3",
+        "markdown-it-deflist": "~2.0.1",
+        "markdown-it-footnote": "~3.0.1",
+        "markdown-it-sub": "~1.0.0",
+        "moment": "~2.15.1",
+        "object-assign": "~4.1.0",
+        "react-helmet": "~3.1.0",
+        "toml-js": "0.0.8"
+    },
+    "devDependencies": {
+        "gh-pages": "~0.11.0"
+    },
+    "license": "MIT",
+    "main": "n/a",
+    "scripts": {
+        "start": "gatsby develop",
+        "preinstall": "npm install -g gatsby",
+        "build": "gatsby build --prefix-links",
+        "deploy": "npm run build && gh-pages -d public",
+        "test": "npm run build"
+    }
 }
