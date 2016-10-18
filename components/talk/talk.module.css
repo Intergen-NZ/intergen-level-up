@@ -1,0 +1,55 @@
+@import '../../styles/base.css';
+
+.root {
+	margin-top: 40px;
+
+	& a {
+		border: none;
+	}
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        left: -65px;
+        top: 7px;
+        border: 5px solid var(--intergen-black);
+    }
+}
+
+.summary {
+	margin: 20px 0 0 0;
+}
+
+ul.tags {
+	list-style: none;
+	margin: 0; padding: 0;
+	lost-utility: clearfix;
+}
+
+li.tag {
+	float: left;
+	margin: 20px 10px 0 0;
+
+	& a {
+		color: rgba(255, 255, 255, 0.6);
+		font-size: 14px;
+		font-weight: 100;
+		text-transform: uppercase;
+		border-bottom: 1px dashed transparent;
+		font-style: italic;
+
+		&:hover {
+			border-bottom-color: rgba(255, 255, 255, 0.6);
+		}
+	}
+}

@@ -12,3 +12,11 @@ html, body {
     margin: 0;
     background-color: var(--intergen-black);
 }
+
+*::selection {
+	background: var(--intergen-yellow);
+}
+
+*::-moz-selection {
+	background: var(--intergen-yellow);
+}

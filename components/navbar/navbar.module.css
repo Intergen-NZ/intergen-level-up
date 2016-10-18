@@ -1,58 +1,25 @@
 @import "../../styles/base.css";
 
-.wrap {
-    height: 60px;
-    background: var(--intergen-yellow);
-}
-
-.container {
+.root {
     lost-utility: clearfix;
     lost-center: var(--max-page-width);
-    line-height: 60px;
+    margin: 20px auto;
 }
 
-.navLeft {
-    lost-column: 1/3;
-
-    & a {
-        text-decoration: none;
-        color: black;
-        border-bottom: 2px solid transparent;
-
-        &:hover {
-            border-bottom-color: black;
-        }
-    }
+.brand {
+	lost-column: 1/3;
 }
 
-.navRight {
-    lost-column: 2/3;
-    lost-align: right;
-    height: 60px;
+.logo {
+	border: none;
+	display: inline-block;
 
-    & ul {
-        margin: 0;
-        list-style: none;
-    }
+	& img {
+		vertical-align: text-top;
+	}
 
-    & li {
-        float: left;
-        padding: 0 10px;
-        height: 60px;
-        margin-right: 10px;
-
-        & a {
-            text-decoration: none;
-            color: black;
-            border-bottom: 2px solid transparent;
-
-            &:hover {
-                border-bottom-color: black;
-            }
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
+	& span {
+		font-size: 20px;
+		color: var(--intergen-logo-yellow);
+	}
 }

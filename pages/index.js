@@ -33,7 +33,16 @@ class Index extends React.Component {
 		return (
 			<div className={styles.root}>
 	            <div className={styles.fixed}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis dolorem quibusdam mollitia, harum repellat illo deserunt iure, maiores debitis iste amet excepturi consectetur nobis natus eligendi minus modi, ipsa ab!</p>
+                    <div>
+                    	<h6>You what?</h6>
+                    	<p>What is the purpose of Intergen: Evolve? How often do we meet? Where do we meet? What are the sessions like? Encourage users to present.</p>
+	                    <p><Link to={prefixLink('/')}>Recurring Skype Meeting Link</Link></p>
+	                    <p><Link to={prefixLink('/')}>Enter talk link</Link></p>
+                    </div>
+
+                    <div>
+                    	<h6>Tags</h6>
+                    </div>
                 </div>
 
                 <div className={styles.sessionListWrap}>
