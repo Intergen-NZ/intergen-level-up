@@ -48,7 +48,7 @@ class Index extends React.Component {
 
         return (
             <ul className={styles.tags}>
-                {tags.map(tag => <li className={styles.tag}><Link to={prefixLink('/')}>{tag}</Link></li>)}
+                {tags.map((tag, i) => <li key={i} className={styles.tag}><Link to={prefixLink('/')}>{tag}</Link></li>)}
             </ul>
         );
     }

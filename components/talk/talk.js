@@ -22,7 +22,7 @@ const Talk = ({ path, data }) => {
 			<p className={styles.summary}>{summary}</p>
 
 			<ul className={styles.tags}>
-				{data.tags.map(tag => <li className={styles.tag}><Link to={prefixLink('/')}>{tag}</Link></li>)}
+				{data.tags.map((tag, i) => <li key={i} className={styles.tag}><Link to={prefixLink('/')}>{tag}</Link></li>)}
 			</ul>
 		</div>
 	);
