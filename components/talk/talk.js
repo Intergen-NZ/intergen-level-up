@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
+import Tags from '../tags/tags';
 
 import styles from './talk.module.css';
 
@@ -12,7 +13,6 @@ const Talk = ({ path, data }) => {
 		summary = summary.substring(0, postSummaryDescription.indexOf(' ') + 250) + '...';
 	}
 
-	// TODO(AM): Pull out tags into a dumb component.
 	return (
 		<div className={styles.root}>
 			<Link to={prefixLink(path)}><h6 className={styles.title}>{data.title}</h6></Link>
@@ -21,9 +21,7 @@ const Talk = ({ path, data }) => {
             </div>
 			<p className={styles.summary}>{summary}</p>
 
-			<ul className={styles.tags}>
-				{data.tags.map((tag, i) => <li key={i} className={styles.tag}><Link to={prefixLink('/')}>{tag}</Link></li>)}
-			</ul>
+            <Tags tags={data.tags} />
 		</div>
 	);
 };
