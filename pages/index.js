@@ -4,6 +4,8 @@ import { prefixLink } from 'gatsby-helpers'
 import * as _ from 'lodash';
 
 import Session from '../components/session/session.js';
+import Tags from '../components/tags/tags';
+
 import styles from './index.module.css';
 
 class Index extends React.Component {
@@ -47,9 +49,7 @@ class Index extends React.Component {
         tags = _.uniq(tags);
 
         return (
-            <ul className={styles.tags}>
-                {tags.map((tag, i) => <li key={i} className={styles.tag}><Link to={prefixLink('/')}>{tag}</Link></li>)}
-            </ul>
+            <Tags tags={tags} />
         );
     }
 
