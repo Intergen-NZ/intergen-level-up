@@ -2,10 +2,10 @@
 
 .root {
 	margin-top: 40px;
+}
 
-	& a {
-		border: none;
-	}
+.link {
+    border: none;
 }
 
 .title {

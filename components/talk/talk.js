@@ -15,7 +15,7 @@ const Talk = ({ path, data }) => {
 
 	return (
 		<div className={styles.root}>
-			<Link to={prefixLink(path)}><h6 className={styles.title}>{data.title}</h6></Link>
+			<Link className={styles.link} to={prefixLink(path)}><h6 className={styles.title}>{data.title}</h6></Link>
             <div>
             	<span>{data.speaker}</span>
             </div>
