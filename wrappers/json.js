@@ -11,24 +11,7 @@ class JsonWrapper extends React.Component {
 		return (
 			<div>
 				<Helmet title={`${config.siteTitle} | ${data.title} - ${data.speaker}`} />
-				<h1>{data.title}</h1>
-				<h2>{data.speaker}</h2>
-                <p>{data.date}</p>
-                <a href={data.slideDeck.link} target="_blank">Slide deck</a>
-
-                <h3>Link dump</h3>
-                <ul>
-                    { data.links.map((link, i) => (
-                        <li key={i}><a href={link.href} target="_blank">{link.title}</a></li>
-                    )) }
-                </ul>
-
-                <h3>Tags</h3>
-                <ul>
-                { data.tags.map((tag, i) => (
-                    <li key={i}><Link to={prefixLink('/')}>{tag}</Link></li>
-                ))}
-                </ul>
+				
 			</div>
 		);
 	}
