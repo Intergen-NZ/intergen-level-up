@@ -4,14 +4,16 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 
+import styles from './json.module.css';
+
 class JsonWrapper extends React.Component {
 	render() {
 		const data = this.props.route.page.data;
 
 		return (
-			<div>
+			<div className={styles.root}>
 				<Helmet title={`${config.siteTitle} | ${data.title} - ${data.speaker}`} />
-				
+                <h3>{data.title}</h3>
 			</div>
 		);
 	}
