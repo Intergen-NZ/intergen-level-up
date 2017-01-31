@@ -20,7 +20,11 @@ class JsonWrapper extends React.Component {
 
                 <div className={styles.talkWrap}>
                     <div className={styles.talk}>
-                        <h6>{data.title}</h6>
+                        <h3 className={styles.title}>{data.title}</h3>
+                        <p className={styles.description}>
+                            {data.description}
+                        </p>
+
                     </div>
                 </div>
 			</div>

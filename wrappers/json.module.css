@@ -1,3 +1,5 @@
+@import '../styles/base.css';
+
 .root {
     lost-utility: clearfix;
 }
@@ -9,4 +11,22 @@
 .talk {
     border-left: 5px solid rgba(255, 255, 255, .6);
     padding-left: 50px;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color: white;
+        display: inline-block;
+        position: absolute;
+        left: -72px;
+        top: 11px;
+        border: 8px solid var(--intergen-black);
+    }
 }
