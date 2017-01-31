@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 
+import Sidebar from '../components/sidebar/sidebar';
+
 import styles from './json.module.css';
 
 class JsonWrapper extends React.Component {
@@ -13,7 +15,14 @@ class JsonWrapper extends React.Component {
 		return (
 			<div className={styles.root}>
 				<Helmet title={`${config.siteTitle} | ${data.title} - ${data.speaker}`} />
-                <h3>{data.title}</h3>
+
+                <Sidebar talks={[]} />
+
+                <div className={styles.talkWrap}>
+                    <div className={styles.talk}>
+                        <h6>{data.title}</h6>
+                    </div>
+                </div>
 			</div>
 		);
 	}
