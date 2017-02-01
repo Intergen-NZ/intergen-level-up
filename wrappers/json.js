@@ -5,26 +5,41 @@ import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 
 import Sidebar from '../components/sidebar/sidebar';
+import Tags from '../components/tags/tags';
+import { getTalks } from '../services/talk';
 
 import styles from './json.module.css';
 
 class JsonWrapper extends React.Component {
-	render() {
-		const data = this.props.route.page.data;
+    constructor(props) {
+        super(props);
 
-        const linkDump = data.links.map(link => {
+        this.state = {
+            talks: getTalks(this.props.route.pages)
+        };
+
+        this.buildLinkDump = this.buildLinkDump.bind(this);
+    }
+
+    buildLinkDump(links) {
+        return links.map(link => {
             return (
                 <li>
                     <a href={link.href} target="_blank">{link.title}</a>
                 </li>
             );
         });
+    }
+
+	render() {
+		const data = this.props.route.page.data;
+        const linkDump = this.buildLinkDump(data.links);
 
 		return (
 			<div className={styles.root}>
 				<Helmet title={`${config.siteTitle} | ${data.title} - ${data.speaker}`} />
 
-                <Sidebar talks={[]} />
+                <Sidebar talks={this.state.talks} />
 
                 <div className={styles.talkWrap}>
                     <div className={styles.talk}>
@@ -50,7 +65,8 @@ class JsonWrapper extends React.Component {
                             </div>
                         }
 
-                        
+                        <h6>Tags</h6>
+                        <Tags tags={data.tags} />
                     </div>
                 </div>
 			</div>

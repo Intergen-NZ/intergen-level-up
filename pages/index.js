@@ -6,6 +6,7 @@ import * as _ from 'lodash';
 import Session from '../components/session/session';
 import Tags from '../components/tags/tags';
 import Sidebar from '../components/sidebar/sidebar';
+import { getTalks } from '../services/talk';
 
 import styles from './index.module.css';
 
@@ -13,17 +14,15 @@ class Index extends React.Component {
 	constructor(props) {
 		super(props);
 
-        this.getTalks = this.getTalks.bind(this);
-		this.getSessions = this.getSessions.bind(this);
+        this.state = {
+            talks: getTalks(this.props.route.pages)
+        };
+
+        this.getSessions = this.getSessions.bind(this);
 	}
 
-    getTalks() {
-        const pages = this.props.route.pages;
-        return pages.filter(page => page.path.indexOf('/talks/') === 0);
-    }
-
     getSessions() {
-        const talks = this.getTalks();
+        const talks = this.state.talks;
 
         let sessions = _.groupBy(talks, talk => {
             return new Date(talk.data.date);
@@ -41,7 +40,7 @@ class Index extends React.Component {
 	render() {
 		return (
 			<div className={styles.root}>
-	            <Sidebar talks={this.getTalks()} />
+	            <Sidebar talks={this.state.talks} />
 
                 <div className={styles.sessionListWrap}>
                     <div className={styles.sessionList}>
